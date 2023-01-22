@@ -1,0 +1,131 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{marginnote}
+\begin{document}
+
+\title{A Research Paper on Internet of Things based
+upon Smart Homes with Security Risk
+Assessment using OCTAVE Allegro}
+
+\author{M Rakesh Raj}
+
+\maketitle
+
+\begin{abstract}
+Web of Things (IoT) conceptualizes the chance of remotely partner and
+watching genuine (things) through the Internet. Concerning our home, this
+thought can be suitably combined to make it progressively astute,
+increasingly secure and robotized. This IoT adventure bases on building a
+sharp remote home security structure which sends alerts to the owner by using
+Internet if there ought to emerge an event of any trespass and raises an
+alarm on the other hand.
+\end{abstract}
+
+\hspace{1cm}
+
+\section{Introduction}
+- All gadgets that automates with the help of internet and transfers using the internet without human-human or human-pc interaction comes under IoT.
+- In consumer market the definition of IoT is more towards “smart domestic” involving gadgets like sensors, cameras, thermostats, etc.
+
+\hspace{1cm}
+
+\section{Aim and Objective}
+To improve the security of home and increase the accessibility of the home
+through an application, and the basic facility in a versatile app is :-
+\begin{enumerate}
+\item can turn on or off LED lights and screen the condition of the LED.
+\item can bolt and open entryways through servo engines and screen if the entryways are bolted or opened.
+\item can screen if the entryways are shut or opened through IR sensors.
+\item is advised through email if the entryway is left open for a really long time.
+\item is advised of who entered through the entryway as the camera catches the face picture and send it to him/her by means of email.
+\item is informed through email if the fire identifier distinguishes smoke.
+\item is ready to control the observation vehicle from anyplace to screen his/her home.
+\end{enumerate}
+
+\hspace{1cm}
+
+\section{Enabling Technologies}
+The empowering advances for IoT incorporate; Radio Frequency identity (RFID),
+internet Protocol (IP), digital Product Code (EPC), Barcode, wireless
+constancy (wireless), Bluetooth, ZigBee, close to Filed verbal exchange (NF
+), Actuators, wireless Sensor Networks (WSN) and synthetic Intelligence (AI).
+
+\hspace{1cm}
+
+\section{Model Design}
+AutoCAD was utilised in designing the separate parts of the house version.
+The parts that were applied within the domestic Automation Simulation are:
+\begin{enumerate}
+\item Two RaspberryPi 2 version B: The principle
+    preparing and controlling unit of the framework.
+    One turned into utilized for the room version and the
+    alternative for the reconnaissance automobile.
+
+\item Servo Motor: It is going approximately as the
+entryway lock.Infrared (IR) sensor: shows the existing
+    circumstance of the front entryway, both opened
+    or shut.
+
+\item Net digital camera: Acts as a reconnaissance digital
+camera for the room gushing snap shots of that room
+that are organized by the RaspberryPi. It makes use
+of OpenCV's picture preparing to have the choice to
+differentiate questions inside the room.
+\item Smoke Detector: It identifies hearth, making sure the
+health of the house.
+\item H-Bridges: every H-Bridge controls engines, are
+utilized to control the 4 DC engines of the vehicle.
+\item Wi-fi Dongle: connected to the Raspberry Pi via
+USB port to permit its connection to far off web in
+place of making use of Ethernet link.
+\end{enumerate}
+
+\hspace{1cm}
+
+\section{Choice of Methodology}
+\begin{itemize}
+\item The Raspberry Pi is a minor computer that has forty GPIO pins and in shape for being modified, so it become picked for its straightforwardness and capacities.
+\item The OCTAVE Allegro methodology is intended to create strength in consequences, allowing exhaustive risk evaluation, concentrating totally on information sources. The method investigations how the records is utilized by the clients or frameworks. In addition, it facilities across the area where the records lives and on how it is presented to risks. Other basic assets can be distinguished and surveyed by means of locating the association among them and the records resource. OCTAVE Allegro gives route, worksheets and surveys for leading the chance appraisal.
+\item Upon receiving the JSON string, the Raspberry Pi take the movement designated by way of that string. This lets in full manipulate and monitoring of all devices connected to the Raspberry Pi
+\item OCTAVE Allegro has an eight step approach that can be separated into 4 levels.
+\end{itemize}
+\hspace{2cm}
+\section{Applications}
+\begin{itemize}
+\item The principle Smart Home Automation System (SHAS) application territory is ecological control with the customary help types lighting/day lighting and Heating, Ventilation and Air molding (HVAC) frameworks, observing and control, wellbeing and security, telehealth care, vitality sparing, natural control, etc
+\item Other home applications include eldercare, health care, energy efficiency and security.
+\end{itemize}
+\subsection{LED Process}
+\begin{itemize}
+\item The LEDs, connected to the Raspberry Pi through the GPIO pins and embedded in the model, were controlled through a mobile application developed with Ionic. A ”Light” tab was created in the application which has a button that toggles between”on” and ”off” when clicked. The default value of the button shows the current status of the LED lights. If the button shows the value “off”, this means that the LEDs are currently turned off. However, when the button is clicked, the value toggles to ”on”, sending a JSON string holding a value of 1 for ”led” attribute, to the channel the application publishes, through PubNub and the ”publish key”.
+\item The Raspberry Pi then receives the JSON string, checking the ”led” attribute value and turns the LEDs accordingly. The mobile application is also a subscriber to the same channel, in which it can check the last status of the LEDs published on PubNub channel and shows either ”ON” or ”OFF” as a default value of the button in the application.
+\end{itemize}
+
+\subsection{Door Lock}
+\begin{itemize}
+\item Similar to the led case Raspberry Pi can also be used for a door loc
+.through GPIO pins, which is glued to the door. When the status of the door
+is locked in the application the mortar is rotated to 90 degrees, thus
+locking the door. Else if the status is unlocked 0 degrees is triggered.
+This is done through the JSON string that is sent across using Raspberry P.’
+\end{itemize}
+
+\subsection{Other Applications}
+\begin{itemize}
+\item Piezoelectric sensor deployed in the key bowl - to indicate the placement of keys
+\item A web camera was associated with the Raspberry Pi through a USB port for the room model observation and movement identification.
+\item A camera module was connected to the Raspberry Pi of the car, which live streams to a YouTube channel, so that the user has an eye inside the house while he/she is away. The YouTube channel link was provided to the mobile application so that the user can control and monitor his/her home in one place. This also uses a surveillance car installed in the house.
+\end{itemize}
+
+\hspace{1cm}
+
+\section{Conclusion}
+\begin{itemize}
+\item IoT has its own constraints and issues which can be fixed by making use of the upcoming advances.
+\item Home Automation is one of the critical usages of IoT. It gives less complex and entertainment living to every person. In this endeavor, a system for working up an IoT programming based canny home computerization structure was completed and attempted through the made model.
+\end{itemize}
+
+\begin{center}
+\line(10,0){430}
+\end{center}
+\end{document}
